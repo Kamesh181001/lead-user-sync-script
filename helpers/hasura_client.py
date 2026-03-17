@@ -1,13 +1,9 @@
 import os
 import requests
 
-# Staging
-HASURA_GRAPHQL_ENDPOINT = 'https://hasura-staging.lidolearning.com/v1/graphql'
-HASURA_ADMIN_SECRET = 'lidolearning-test'
 
-# Prod
-# HASURA_GRAPHQL_ENDPOINT = 'https://hasuraapi.lidolearning.com/v1/graphql'
-# HASURA_ADMIN_SECRET = '10xbetter'
+HASURA_GRAPHQL_ENDPOINT = os.getenv("HASURA_GRAPHQL_ENDPOINT")
+HASURA_ADMIN_SECRET = os.getenv("HASURA_GRAPHQL_ENDPOINT")
 
 
 def run_query(query, variables):
